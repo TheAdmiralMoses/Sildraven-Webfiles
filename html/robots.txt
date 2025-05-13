@@ -1,0 +1,9 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Disallow: /click.html
+Disallow: /code_templates.html
+Disallow: /clickCounter.js
+
+Sitemap: https://sildraven.org/sitemap.xml

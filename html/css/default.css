@@ -1,0 +1,140 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #333;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4 {
+    color: #ddd; /* Heading color */
+}
+
+.entry {
+    margin-bottom: 20px;
+    padding: 15px; /* Add some padding to each entry */
+    border: 1px solid #555; /* Subtle border */
+    border-radius: 5px; /* Rounded corners for entries */
+    background-color: #555; /* Slightly darker background for entries */
+}
+
+.entry-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.entry p { /* Target paragraphs within the .entry class */
+    text-indent: 2em;
+}
+
+.category-filter {
+    margin-bottom: 20px;
+}
+.category-filter button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #666;
+    color: #eee;
+    cursor: pointer;
+}
+.category-filter button.active {
+    background-color: #888; /* Highlight active button */
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #555; /* Slightly darker background for footer */
+    border-top: 1px solid #666; /* Subtle border */
+    border-radius: 5px; /* Rounded corners for footer */
+}
+
+.discord-username {
+    color: #5865F2; /* Discord's blurple color */
+}
+
+nav {
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    margin-right: 15px; /* Add some space between links */
+}
+
+.image { /* Or use the ID of your image */
+    max-width: 95%; /* Image will never be wider than its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes extra space below the image */
+}
+
+/* Theme Toggle Styling */
+/* .theme-toggle {
+    position: absolute; */
+    /* Place it in the top right */
+    /* top: 10px;
+    right: 10px;
+    z-index: 1000; */
+    /* Ensure it's on top of other elements */
+/* }
+
+#theme-toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.dark-icon {
+    display: none; */
+    /* Initially hide the dark icon */
+/* }
+
+body.dark-mode .light-icon {
+    display: none; */
+    /* Hide light icon in dark mode */
+/* }
+
+body.dark-mode .dark-icon {
+    display: inline; */
+    /* Show dark icon in dark mode */
+/* } */
+
+/* Light Mode (Default) */
+/* body {
+    background-color: #f9f9f9;
+    color: #333;
+} */
+
+/* Dark Mode */
+/* body.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+} */

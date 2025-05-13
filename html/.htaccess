@@ -1,0 +1,27 @@
+RewriteEngine On
+
+# 0. Redirect index to root (Recommended for SEO)
+RewriteCond %{THE_REQUEST} ^GET\ /index\.html? [NC]
+RewriteRule ^(.*)index\.html?$ / [R=301,L]
+RewriteCond %{THE_REQUEST} ^GET\ /index\ HTTP/
+RewriteRule ^(.*)index\.html?$ / [R=301,L]
+
+# 1. Prevent Recursive Rewrites (Crucial)
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule .* - [L]
+
+# 2. Check for Existing Files or Directories (Crucial)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .* - [L]
+
+# 3. Internal Mapping for .html Removal (Crucial - No Redirect)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteCond %{REQUEST_URI} !\.(js|css|xml|txt|ico|png|webp)$ [NC] # Exclude site files
+RewriteRule ^(.*)$ $1.html [L]
+
+# 5. Serve index.html if No File or Directory Found
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [L]
