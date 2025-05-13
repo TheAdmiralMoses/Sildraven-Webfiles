@@ -6,4 +6,4 @@ Disallow: /click.html
 Disallow: /code_templates.html
 Disallow: /clickCounter.js
 
-Sitemap: https://sildraven.org/sitemap.xml
+Sitemap: https://rp.sildraven.org/sitemap.xml
